@@ -1,0 +1,60 @@
+{
+    "workbench.panel.location": "bottom",
+    //"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\bash.exe",
+    "files.autoSave"                   : "off",
+    "editor.multiCursorModifier"       : "alt",
+    "editor.renderWhitespace"          : "none",
+    "editor.renderControlCharacters"   : true,
+    "sync.gist": "69df130a5a8883be3748c7971b4e73b7",
+    "sync.lastUpload": "2018-07-09T14:29:07.306Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "2018-07-09T16:07:34.902Z",
+    "sync.forceDownload": false,
+    "sync.anonymousGist"               : false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "explorer.confirmDelete"           : false,
+    "window.zoomLevel"                 : 1,
+    "workbench.iconTheme"              : "vscode-icons",
+    "editor.minimap.enabled"           : false,
+    "workbench.statusBar.visible"      : true,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "eslint.autoFixOnSave": true,
+    "breadcrumbs.enabled": true,
+    "editor.fontSize": 13.5,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "vim.easymotion": true,
+    "vim.leader": " ",
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<leader>", "h"],
+            "after": ["<left>"]
+        },
+        {
+            "before": ["<leader>", "j"],
+            "after": ["<down>"]
+        },
+        {
+            "before": ["<leader>", "k"],
+            "after": ["<up>"]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "after": ["<right>"]
+        }
+    ]
+}

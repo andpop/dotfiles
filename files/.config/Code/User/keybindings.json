@@ -1,0 +1,70 @@
+// Поместите настраиваемые сочетания клавиш в этот файл, чтобы перезаписать клавиши по умолчанию.
+[
+    {
+        "key"    : "shift+alt+up",
+        "command": "editor.action.insertCursorAbove",
+        "when"   : "editorTextFocus"
+    },
+    {
+        "key"    : "ctrl+alt+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when"   : "editorTextFocus"
+    },
+    {
+        "key"    : "shift+alt+down",
+        "command": "editor.action.insertCursorBelow",
+        "when"   : "editorTextFocus"
+    },
+    {
+        "key"    : "ctrl+alt+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when"   : "editorTextFocus"
+    },
+    {
+        "key"    : "ctrl+shift+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when"   : "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key"    : "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when"   : "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key"    : "ctrl+shift+/",
+        "command": "editor.action.blockComment",
+        "when"   : "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key"    : "shift+alt+a",
+        "command": "-editor.action.blockComment",
+        "when"   : "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when"   : "editorFocus"
+    },
+    {
+        "key"    : "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when"   : "editorFocus"
+    },
+    {
+        "key"    : "ctrl+shift+left",
+        "command": "editor.action.addSelectionToPreviousFindMatch"
+    },
+    { "key": "alt+a",  "command": "xandeer.aligncode",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "editorTextFocus && !editorReadonly"
+    }
+]
