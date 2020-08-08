@@ -6,6 +6,6 @@
 ### Tmux
 * Base config install from https://github.com/gpakosz/.tmux
 * Install xclip for correct work with system buffer
-``` Bash
+```sh
 sudo apt-get install xclip
 ```
