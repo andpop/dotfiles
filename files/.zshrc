@@ -104,7 +104,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH=~/.composer/vendor/bin:$PATH
-alias proj1="cd ~/projects/hexlet/php-project-1"
+source $HOME/.aliases
+# alias proj1="cd ~/projects/hexlet/php-project-1"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
