@@ -9,3 +9,7 @@
 ```sh
 sudo apt-get install xclip
 ```
+
+### Vifm
+* Color schemes install from https://github.com/vifm/vifm-colors
+
