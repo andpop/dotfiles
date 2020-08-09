@@ -105,20 +105,45 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=~/.composer/vendor/bin:$PATH
 source $HOME/.aliases
+set -o vi
 # alias proj1="cd ~/projects/hexlet/php-project-1"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/andrey/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/andrey/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/andrey/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/andrey/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+
+#__conda_setup="$('/home/andrey/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/home/andrey/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/home/andrey/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/home/andrey/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
 # <<< conda initialize <<<
+
+# show vim status
+# http://zshwiki.org/home/examples/zlewidgets
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- NORMAL -- }/(main|viins)/-- INSERT --}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# add missing vim hotkeys
+# fixes backspace deletion issues
+# http://zshwiki.org/home/zle/vi-mode
+bindkey -a u undo
+bindkey -a '^R' redo
+bindkey '^?' backward-delete-char
+bindkey '^H' backward-delete-char
+
+# history search in vim mode
+# http://zshwiki.org/home/zle/bindkeys#why_isn_t_control-r_working_anymore
+bindkey -M viins '^s' history-incremental-search-backward
+bindkey -M vicmd '^s' history-incremental-search-backward
 
