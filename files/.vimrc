@@ -3,6 +3,8 @@ filetype plugin on
 color darkblue
 
 set hlsearch
+set ignorecase
+set smartcase
 "set incsearch
 "set cursorline
 set number
@@ -10,14 +12,45 @@ set mouse=a
 
 set autoindent
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
+set wrap
+set linebreak
+
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowritebackup
+set nowb
+set noswapfile
+
+set encoding=utf-8
+
+set hidden
+
 let mapleader=" "
 
-
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+imap [ []<LEFT>
+imap ( ()<LEFT>
+imap { {}<LEFT>
+nmap j gj
+nmap k gk
+
+" Map ctrl-movement keys to window switching
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left>
+
+nmap <silent> <leader><leader> :NERDTreeToggle<CR>
+
+" Edit .vimrc
+map <leader>vl :vsp $MYVIMRC<CR>
+map <leader>vr :source $MYVIMRC<CR>
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -28,8 +61,13 @@ call plug#begin('~/.vim/plugged')
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'lyokha/vim-xkbswitch'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
+Plug 'flazz/vim-colorschemes'
+Plug 'tpope/vim-surround'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'scrooloose/nerdtree'
 
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -38,7 +76,6 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using a non-master branch
@@ -65,4 +102,3 @@ let g:XkbSwitchIMappings = ['ru']
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 "inoremap jj <ESC>
 "inoremap оо <ESC>
-
