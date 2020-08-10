@@ -1,6 +1,10 @@
 set nocompatible
 filetype plugin on
-color darkblue
+let g:molokai_original=1
+" color darkblue
+" color molokai
+" color gruvbox
+color zenburn
 
 set hlsearch
 set ignorecase
@@ -19,6 +23,14 @@ set expandtab
 set smartindent
 set wrap
 set linebreak
+
+set backspace   =indent,eol,start  " Make backspace work as you would expect.
+set hidden                 " Switch between buffers without having to save first.
+set laststatus  =2         " Always show statusline.
+set display     =lastline  " Show as much as possible of the last line
+
+set showmode               " Show current mode in command-line.
+set showcmd                " Show already typed keys when more are expected.
 
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
@@ -68,6 +80,9 @@ Plug 'tpope/vim-surround'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'scrooloose/nerdtree'
+Plug 'mattn/emmet-vim'
+Plug 'matze/vim-move'
+Plug 'tpope/vim-commentary'
 
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -102,3 +117,10 @@ let g:XkbSwitchIMappings = ['ru']
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 "inoremap jj <ESC>
 "inoremap оо <ESC>
+
+nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr> # Move current line up
+nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>  # Move current line down
+
+nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[    # Insert blank line after current line (in Normal mode)
+nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>   # Insert blank line before current line (in Normal mode)
+
