@@ -71,17 +71,19 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'tpope/vim-sensible'
 Plug 'lyokha/vim-xkbswitch'
-" Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'matze/vim-move'
 Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
 
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -94,7 +96,7 @@ Plug 'tpope/vim-commentary'
 
 " Using a non-master branch
 "Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-      
+
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 "Plug 'fatih/vim-go', { 'tag': '*' }
 
@@ -114,17 +116,29 @@ let g:XkbSwitchEnabled = 1
 let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
 let g:XkbSwitchIMappings = ['ru']
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-"inoremap jj <ESC>
-"inoremap оо <ESC>
 
 " Move current line up
-nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr> 
+nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
 " Move current line down
 nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 
 " Insert blank line after current line (in Normal mode)
 nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
 " Insert blank line after current line (in Normal mode)
-nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr> 
+nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 
+" Перемещения в режиме редактирования
+inoremap <leader>h <left>
+inoremap <leader>j <down>
+inoremap <leader>k <up>
+inoremap <leader>l <right>
+
+" format the entire file
+nnoremap ff :normal! gg=G``<CR>
+
+" set text wrapping toggles
+nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
+
+" color jellybeans
 color zenburn
+
