@@ -4,7 +4,6 @@ let g:molokai_original=1
 " color darkblue
 " color molokai
 " color gruvbox
-color zenburn
 
 set hlsearch
 set ignorecase
@@ -46,9 +45,9 @@ let mapleader=" "
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
-imap [ []<LEFT>
-imap ( ()<LEFT>
-imap { {}<LEFT>
+" imap [ []<LEFT>
+" imap ( ()<LEFT>
+" imap { {}<LEFT>
 nmap j gj
 nmap k gk
 
@@ -118,9 +117,14 @@ set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNO
 "inoremap jj <ESC>
 "inoremap оо <ESC>
 
-nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr> # Move current line up
-nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>  # Move current line down
+" Move current line up
+nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr> 
+" Move current line down
+nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 
-nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[    # Insert blank line after current line (in Normal mode)
-nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>   # Insert blank line before current line (in Normal mode)
+" Insert blank line after current line (in Normal mode)
+nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
+" Insert blank line after current line (in Normal mode)
+nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr> 
 
+color zenburn
