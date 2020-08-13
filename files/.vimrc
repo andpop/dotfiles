@@ -1,9 +1,5 @@
 set nocompatible
 filetype plugin on
-let g:molokai_original=1
-" color darkblue
-" color molokai
-" color gruvbox
 
 set hlsearch
 set ignorecase
@@ -84,6 +80,8 @@ Plug 'mattn/emmet-vim'
 Plug 'matze/vim-move'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
+Plug 'bkad/CamelCaseMotion'
+Plug 'tpope/vim-unimpaired'
 
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -112,26 +110,41 @@ Plug 'vim-airline/vim-airline'
 " Initialize plugin system
 call plug#end()
 
+
+let g:molokai_original=1
+" Dark colorschemes
+" color darkblue
+" color molokai
+" color gruvbox
+" color jellybeans
+" color zenburn
+"
+" Light colorschemes
+color basic-light
+color PaperColor
+
+let g:camelcasemotion_key = '<leader>'
+
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
 let g:XkbSwitchIMappings = ['ru']
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
-" Move current line up
-nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
-" Move current line down
-nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
+" " Move current line up
+" nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
+" " Move current line down
+" nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 
-" Insert blank line after current line (in Normal mode)
-nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
-" Insert blank line after current line (in Normal mode)
-nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
+" " Insert blank line after current line (in Normal mode)
+" nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
+" " Insert blank line after current line (in Normal mode)
+" nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 
 " Перемещения в режиме редактирования
-inoremap <leader>h <left>
-inoremap <leader>j <down>
-inoremap <leader>k <up>
-inoremap <leader>l <right>
+" inoremap <leader>h <left>
+" inoremap <leader>j <down>
+" inoremap <leader>k <up>
+" inoremap <leader>l <right>
 
 " format the entire file
 nnoremap ff :normal! gg=G``<CR>
@@ -139,6 +152,4 @@ nnoremap ff :normal! gg=G``<CR>
 " set text wrapping toggles
 nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
 
-" color jellybeans
-color zenburn
 
