@@ -82,6 +82,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'bkad/CamelCaseMotion'
 Plug 'tpope/vim-unimpaired'
+Plug 'machakann/vim-highlightedyank'
 
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -110,6 +111,8 @@ Plug 'tpope/vim-unimpaired'
 " Initialize plugin system
 call plug#end()
 
+" set highlight to 1000 ms
+let g:highlightedyank_highlight_duration = 800
 
 let g:molokai_original=1
 " Dark colorschemes
