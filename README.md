@@ -14,4 +14,9 @@ sudo apt-get install xclip
 * Color schemes install from https://github.com/vifm/vifm-colors
 
 ### SSH
-* Config for access via SSH to two GitHub profiles (andpop and andpop-mrsu). Befor cloning repos from andpop-mrsu we have to tweak addresses like git@github.com-mrsu:andpop-mrsu/repo_name.
+* Config for access via SSH to two GitHub accounts (andpop and andpop-mrsu). Befor cloning repos from andpop-mrsu we have to tweak addresses like git@github.com-mrsu:andpop-mrsu/repo_name.
+* Command for generating SSH key for additional accounts: 
+```sh
+ssh-keygen -t rsa -b 4096 -C “andrvpopov@gmail.com”
+```
+Also we have to input another name for key file (id_rsa by default).
