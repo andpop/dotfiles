@@ -517,3 +517,5 @@ nnoremap yr :!echo -n %c:r | xclip -selection clipboard %i<cr>:echo expand('%"c:
 map <f5> Y<tab>p<tab>
 map <f6> Y<tab>P<tab>
 
+" source /home/andrey/.config/vifm/devicons/SETUP
+

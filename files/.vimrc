@@ -19,6 +19,9 @@ set smartindent
 set wrap
 set linebreak
 
+set splitbelow " New window is created below of current window
+set splitright " New window is created right of current window
+
 set backspace   =indent,eol,start  " Make backspace work as you would expect.
 set hidden                 " Switch between buffers without having to save first.
 set laststatus  =2         " Always show statusline.
@@ -53,7 +56,7 @@ map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
 
-nmap <silent> <leader><leader> :NERDTreeToggle<CR>
+nmap <silent> <leader><leader>t :NERDTreeToggle<CR>
 
 " Edit .vimrc
 map <leader>vl :vsp $MYVIMRC<CR>
@@ -156,3 +159,4 @@ nnoremap ff :normal! gg=G``<CR>
 nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
 
 
+let mapleader=" "
