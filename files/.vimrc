@@ -64,8 +64,12 @@ map <leader>vr :source $MYVIMRC<CR>
 
 " Работа с системным буфером обмена
 inoremap <C-v> <ESC>"+pa
-vnoremap <C-c> "+y
-vnoremap <C-d>"+d
+" vnoremap <C-c> "+y
+" vnoremap <C-d>"+d
+
+" Сохранение файла по F2
+inoremap <F2> <ESC>:w<CR>
+nnoremap <F2> :w<CR>
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
