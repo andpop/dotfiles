@@ -69,6 +69,7 @@ inoremap <C-v> <ESC>"+pa
 
 " Сохранение файла по F2
 inoremap <F2> <ESC>:w<CR>
+cnoremap <F2> <ESC>:w<CR>
 nnoremap <F2> :w<CR>
 
 " Specify a directory for plugins
