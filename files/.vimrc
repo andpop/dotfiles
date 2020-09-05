@@ -64,7 +64,7 @@ map <leader>vr :source $MYVIMRC<CR>
 
 " Работа с системным буфером обмена
 inoremap <C-v> <ESC>"+pa
-" vnoremap <C-c> "+y
+vnoremap <C-c> "+y
 " vnoremap <C-d>"+d
 
 " Сохранение файла по F2
