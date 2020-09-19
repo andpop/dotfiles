@@ -77,9 +77,10 @@ nnoremap <F2> :w<CR>
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Make sure you use single quotes
 
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Include plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'tpope/vim-sensible'
 Plug 'lyokha/vim-xkbswitch'
 Plug 'easymotion/vim-easymotion'
@@ -96,6 +97,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'bkad/CamelCaseMotion'
 Plug 'tpope/vim-unimpaired'
 Plug 'machakann/vim-highlightedyank'
+Plug 'vifm/vifm.vim'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vimfm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>vv :Vifm<CR>
+map <Leader>vs :VsplitVifm<CR>
+map <Leader>sp :SplitVifm<CR>
+map <Leader>dv :DiffVifm<CR>
+map <Leader>tv :TabVifm<CR>
 
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -167,6 +178,5 @@ nnoremap ff :normal! gg=G``<CR>
 
 " set text wrapping toggles
 nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
-
 
 let mapleader=" "
