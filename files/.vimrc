@@ -63,8 +63,8 @@ map <leader>vl :vsp $MYVIMRC<CR>
 map <leader>vr :source $MYVIMRC<CR>
 
 " Работа с системным буфером обмена
-inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
+inoremap <C-v> <ESC>"+pa
 " vnoremap <C-d>"+d
 
 " Сохранение файла по F2
@@ -98,44 +98,11 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'tpope/vim-unimpaired'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vifm/vifm.vim'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vimfm
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>vv :Vifm<CR>
-map <Leader>vs :VsplitVifm<CR>
-map <Leader>sp :SplitVifm<CR>
-map <Leader>dv :DiffVifm<CR>
-map <Leader>tv :TabVifm<CR>
-
-" Any valid git URL is allowed
-"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-" Multiple Plug commands can be written in a single line using | separators
-"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" On-demand loading
-"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" Using a non-master branch
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-"Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-"Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
-"wPlug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Unmanaged plugin (manually installed and updated)
-"Plug '~/my-prototype-plugin'
+Plug 'Yggdroot/indentLine'
 
 " Initialize plugin system
 call plug#end()
 
-" set highlight to 1000 ms
 let g:highlightedyank_highlight_duration = 800
 
 let g:molokai_original=1
@@ -147,25 +114,42 @@ let g:molokai_original=1
 " color zenburn
 "
 " Light colorschemes
-color basic-light
-color PaperColor
+" color basic-light
+" color PaperColor
+color jellybeans
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vimfm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>vv :Vifm<CR>
+map <Leader>vs :VsplitVifm<CR>
+map <Leader>sp :SplitVifm<CR>
+map <Leader>dv :DiffVifm<CR>
+map <Leader>tv :TabVifm<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vbkad/CamelCaseMotion
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:camelcasemotion_key = '<leader>'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Yggdroot/indentLine
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indentLine_char = '│'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  => lyokha/vim-xkbswitch
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
 let g:XkbSwitchIMappings = ['ru']
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
-" " Move current line up
-" nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
-" " Move current line down
-" nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
-
-" " Insert blank line after current line (in Normal mode)
-" nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
-" " Insert blank line after current line (in Normal mode)
-" nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 
 " Перемещения в режиме редактирования
 " inoremap <leader>h <left>
@@ -180,3 +164,9 @@ nnoremap ff :normal! gg=G``<CR>
 nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
 
 let mapleader=" "
+
+" Включаем перенос строк, для текста он нужен
+autocmd FileType markdown :set wrap linebreak nolist
+autocmd FileType markdown :colorscheme basic-light
+autocmd FileType markdown :colorscheme PaperColor
+
