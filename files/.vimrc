@@ -99,6 +99,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vifm/vifm.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'PProvost/vim-ps1'
 
 " Initialize plugin system
 call plug#end()
