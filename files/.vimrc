@@ -100,6 +100,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'vifm/vifm.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'PProvost/vim-ps1'
+Plug 'embark-theme/vim', { 'as': 'embark' }
 
 " Initialize plugin system
 call plug#end()
@@ -170,4 +171,11 @@ let mapleader=" "
 autocmd FileType markdown :set wrap linebreak nolist
 autocmd FileType markdown :colorscheme basic-light
 autocmd FileType markdown :colorscheme PaperColor
+
+inoremap (; (<CR>);<C-c>O
+inoremap (, (<CR>),<C-c>O
+inoremap {; {<CR>};<C-c>O
+inoremap {, {<CR>},<C-c>O
+inoremap [; [<CR>];<C-c>O
+inoremap [, [<CR>],<C-c>O
 
