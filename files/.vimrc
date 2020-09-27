@@ -101,6 +101,8 @@ Plug 'vifm/vifm.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'PProvost/vim-ps1'
 Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
 
 " Initialize plugin system
 call plug#end()
