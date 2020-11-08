@@ -103,6 +103,7 @@ Plug 'PProvost/vim-ps1'
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
+Plug 'suy/vim-context-commentstring'
 
 " Initialize plugin system
 call plug#end()
@@ -174,6 +175,7 @@ autocmd FileType markdown :set wrap linebreak nolist
 autocmd FileType markdown :colorscheme basic-light
 autocmd FileType markdown :colorscheme PaperColor
 
+" Парные скобки для блоков кода
 inoremap (; (<CR>);<C-c>O
 inoremap (, (<CR>),<C-c>O
 inoremap {; {<CR>};<C-c>O
@@ -181,3 +183,6 @@ inoremap {, {<CR>},<C-c>O
 inoremap [; [<CR>];<C-c>O
 inoremap [, [<CR>],<C-c>O
 
+" Сохранять сделанные складки (folds) при закрытии/открытии файла
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
