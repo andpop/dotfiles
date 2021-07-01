@@ -1,6 +1,8 @@
 {
     "workbench.panel.location": "bottom",
     //"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\bash.exe",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
     "files.autoSave"                   : "off",
     "editor.multiCursorModifier"       : "alt",
     "editor.renderWhitespace"          : "none",
@@ -17,7 +19,7 @@
     "sync.quietSync": false,
     "sync.askGistName": false,
     "explorer.confirmDelete"           : false,
-    "window.zoomLevel"                 : 1,
+    "window.zoomLevel"                 : 2,
     "workbench.iconTheme"              : "vscode-icons",
     "editor.minimap.enabled"           : false,
     "workbench.statusBar.visible"      : true,
@@ -55,24 +57,6 @@
     "vim.highlightedyank.duration": 500,
     "vim.leader": " ",
     "vim.useSystemClipboard": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["<leader>", "h"],
-            "after": ["<left>"]
-        },
-        {
-            "before": ["<leader>", "j"],
-            "after": ["<down>"]
-        },
-        {
-            "before": ["<leader>", "k"],
-            "after": ["<up>"]
-        },
-        {
-            "before": ["<leader>", "l"],
-            "after": ["<right>"]
-        }
-    ],
     "vim.normalModeKeyBindings": [
         {
             "before": ["<Enter>"],
@@ -83,10 +67,14 @@
             "after": ["i"]
         }
     ],
-    "workbench.colorTheme": "Default Light+",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#B48EAD",
-        "statusBar.noFolderBackground": "#B48EAD",
-        "statusBar.debuggingBackground": "#B48EAD"
+        "statusBar.background": "#8FBCBB",
+        "statusBar.noFolderBackground": "#8FBCBB",
+        "statusBar.debuggingBackground": "#8FBCBB",
+        "statusBar.foreground": "#434C5E"
+    },
+    "vim.hlsearch": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
     }
 }
