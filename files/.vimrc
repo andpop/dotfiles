@@ -62,15 +62,19 @@ nmap <silent> <leader><leader>t :NERDTreeToggle<CR>
 map <leader>vl :vsp $MYVIMRC<CR>
 map <leader>vr :source $MYVIMRC<CR>
 
-" Работа с системным буфером обмена
+" Work with system clipboard
 vnoremap <C-c> "+y
 inoremap <C-v> <ESC>"+pa
 " vnoremap <C-d>"+d
 
-" Сохранение файла по F2
+" Save file via F2
 inoremap <F2> <ESC>:w<CR>
 cnoremap <F2> <ESC>:w<CR>
 nnoremap <F2> :w<CR>
+
+" Settings for netrw
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 25
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
