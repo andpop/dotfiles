@@ -69,7 +69,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git npm composer sudo web-search zsh-syntax-highlighting)
-plugins=(npm composer sudo web-search zsh-syntax-highlighting git zsh-autosuggestions)
+plugins=(npm composer sudo web-search zsh-syntax-highlighting git zsh-autosuggestions history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -148,6 +148,8 @@ bindkey '^H' backward-delete-char
 bindkey -M viins '^s' history-incremental-search-backward
 bindkey -M vicmd '^s' history-incremental-search-backward
 
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
