@@ -62,19 +62,15 @@ nmap <silent> <leader><leader>t :NERDTreeToggle<CR>
 map <leader>vl :vsp $MYVIMRC<CR>
 map <leader>vr :source $MYVIMRC<CR>
 
-" Work with system clipboard
+" Работа с системным буфером обмена
 vnoremap <C-c> "+y
 inoremap <C-v> <ESC>"+pa
 " vnoremap <C-d>"+d
 
-" Save file via F2
+" Сохранение файла по F2
 inoremap <F2> <ESC>:w<CR>
 cnoremap <F2> <ESC>:w<CR>
 nnoremap <F2> :w<CR>
-
-" Settings for netrw
-let g:netrw_browse_split = 4
-let g:netrw_winsize = 25
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -190,3 +186,6 @@ inoremap [, [<CR>],<C-c>O
 " Сохранять сделанные складки (folds) при закрытии/открытии файла
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
+
+" Делает текущим каталог, в котором находится редактируемый файл
+set autochdir
