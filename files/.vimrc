@@ -109,6 +109,7 @@ Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'suy/vim-context-commentstring'
+Plug 'jlanzarotta/bufexplorer'
 
 " Initialize plugin system
 call plug#end()
