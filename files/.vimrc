@@ -57,7 +57,11 @@ map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
 
+" Файловый менеджер
+" Показать/скрыть панель NERDTree
 nmap <silent> <leader><leader>t :NERDTreeToggle<CR>
+" Открыть панель NERDTree и встать на файле, открытом в текущем буфере
+nmap <silent> <leader><leader>f :NERDTreeFind<CR>
 
 " Edit .vimrc
 map <leader>vl :vsp $MYVIMRC<CR>
