@@ -1,12 +1,12 @@
 ### Configuration for:
-* [Cherrytree] (./cherrytree)
-* [Visual Studio Code] (./code)
-* [NVim] (./nvim)
-* [Oh-My-Zsh] (./oh-my-zsh)
-* [tmux] (./tmux)
-* [vifm] (./vifm)
-* [Vim] (./vim)
-* [Zsh] (./zsh)
+* [Cherrytree](./cherrytree/README.md)
+* [Visual Studio Code](./code)
+* [NVim](./nvim)
+* [Oh-My-Zsh](./oh-my-zsh)
+* [tmux](./tmux)
+* [vifm](./vifm)
+* [Vim](./vim)
+* [Zsh](./zsh)
 
 ### Oh-my-zsh
 
