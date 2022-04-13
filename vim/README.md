@@ -1,11 +1,11 @@
 # Editor Vim
-* Use `<C-[>` instead of `<Esc>`
-* `<leader>` - Space
+* Use `<C--[>` instead of `<Esc>`
+* `<leader>` -- Space
 ## Plugins
-* `:PlugInstall` - plugin installations
+* `:PlugInstall` -- plugin installations
 ## File Tree
-* `<leader><leader>t` - toggle file tree panel
+* `<leader><leader>t` -- toggle file tree panel
 ## Navigation
 ## Editing
-* `[<leader` and `]<leader>` - add empty line above and under cursor (in normal mode)
+* `[<leader` and `]<leader>` -- add empty line above and under cursor (in normal mode)
 
