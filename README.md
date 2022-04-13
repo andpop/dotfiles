@@ -1,3 +1,13 @@
+### Configuration for:
+* [Cherrytree] (./cherrytree)
+* [Visual Studio Code] (./code)
+* [NVim] (./nvim)
+* [Oh-My-Zsh] (./oh-my-zsh)
+* [tmux] (./tmux)
+* [vifm] (./vifm)
+* [Vim] (./vim)
+* [Zsh] (./zsh)
+
 ### Oh-my-zsh
 
 * All aliases are described in .aliases file. 
