@@ -57,6 +57,7 @@ map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
 
 nmap <silent> <leader><leader>t :NERDTreeToggle<CR>
+nmap <silent> <leader><leader>f :NERDTreeFind<CR>
 
 " Edit .vimrc
 map <leader>vl :vsp $MYVIMRC<CR>
@@ -106,8 +107,10 @@ Plug 'Yggdroot/indentLine'
 Plug 'PProvost/vim-ps1'
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-entire'
+Plug 'kina/vim-textobj-entire'
 Plug 'suy/vim-context-commentstring'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'vim-scripts/ReplaceWithRegister'
 
 " Initialize plugin system
 call plug#end()
@@ -197,8 +200,13 @@ autocmd BufWinEnter *.* silent loadview
 set autochdir
 
 " Fixes bug in nvim terminal. It should be same as vim - ineractive
-augroup nvim_term
-  au!
-  au TermOpen * startinsert
-  au TermClose * stopinsert
-augroup END
+" augroup nvim_term
+"   au!
+"   au TermOpen * startinsert
+"   au TermClose * stopinsert
+
+"   " entering terminal buffer for the first time
+"   " au TermEnter term://* startinsert
+"   " switching to terminal window/buffer
+"   " au BufEnter term://* startinsert
+" augroup END

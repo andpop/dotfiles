@@ -110,6 +110,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'suy/vim-context-commentstring'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'vim-scripts/ReplaceWithRegister'
 
 " Initialize plugin system
 call plug#end()
