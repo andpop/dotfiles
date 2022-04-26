@@ -5,7 +5,7 @@ set hlsearch
 set ignorecase
 set smartcase
 "set incsearch
-"set cursorline
+set cursorline
 set number
 set relativenumber
 set mouse=a
