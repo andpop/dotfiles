@@ -5,7 +5,7 @@ set hlsearch
 set ignorecase
 set smartcase
 "set incsearch
-"set cursorline
+set cursorline
 set number
 set relativenumber
 set mouse=a
@@ -48,8 +48,8 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " imap [ []<LEFT>
 " imap ( ()<LEFT>
 " imap { {}<LEFT>
-nmap j gj
-nmap k gk
+" nmap j gj
+" nmap k gk
 
 " Map ctrl-movement keys to window switching
 map <C-k> <C-w><Up>
