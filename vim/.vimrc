@@ -1,13 +1,13 @@
 set nocompatible
 filetype plugin on
 
+set relativenumber
 set hlsearch
 set ignorecase
 set smartcase
 "set incsearch
 "set cursorline
 set number
-set relativenumber
 set mouse=a
 
 set autoindent
@@ -112,6 +112,7 @@ Plug 'kana/vim-textobj-entire'
 Plug 'suy/vim-context-commentstring'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'vimwiki/vimwiki'
 
 " Initialize plugin system
 call plug#end()
@@ -171,7 +172,7 @@ set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNO
 " inoremap <leader>l <right>
 
 " format the entire file
-nnoremap ff :normal! gg=G``<CR>
+" nnoremap ff :normal! gg=G``<CR>
 
 " set text wrapping toggles
 nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
@@ -182,6 +183,9 @@ let mapleader=" "
 autocmd FileType markdown :set wrap linebreak nolist
 autocmd FileType markdown :colorscheme basic-light
 autocmd FileType markdown :colorscheme PaperColor
+autocmd FileType markdown setlocal textwidth=80
+autocmd FileType markdown setlocal colorcolumn=80
+
 
 " Парные скобки для блоков кода
 inoremap (; (<CR>);<C-c>O
@@ -197,3 +201,16 @@ autocmd BufWinEnter *.* silent loadview
 
 " Делает текущим каталог, в котором находится редактируемый файл
 set autochdir
+
+au VimEnter no_plugins.vim setl window=66
+au VimEnter no_plugins.vim normal 8Gzz
+au VimEnter no_plugins.vim command! GO normal M17jzzH
+au VimEnter no_plugins.vim command! BACK normal M17kzzH
+au VimEnter no_plugins.vim command! RUN execute getline(".")
+au VimEnter no_plugins.vim unmap H
+au VimEnter no_plugins.vim unmap L
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
