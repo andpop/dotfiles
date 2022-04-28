@@ -113,6 +113,7 @@ Plug 'suy/vim-context-commentstring'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vimwiki/vimwiki'
+Plug 'junegunn/goyo.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -182,7 +183,8 @@ let mapleader=" "
 " Включаем перенос строк, для текста он нужен
 autocmd FileType markdown :set wrap linebreak nolist
 autocmd FileType markdown :colorscheme basic-light
-autocmd FileType markdown :colorscheme PaperColor
+" autocmd FileType markdown :colorscheme PaperColor
+autocmd FileType markdown :colorscheme gruvbox
 autocmd FileType markdown setlocal textwidth=80
 autocmd FileType markdown setlocal colorcolumn=80
 
