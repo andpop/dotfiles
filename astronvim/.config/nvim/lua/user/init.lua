@@ -48,6 +48,7 @@ local config = {
                         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
                         wrap = false, -- sets vim.opt.wrap
                         clipboard = vim.opt.clipboard + 'unnamedplus',
+                        scrolloff = 2
                 },
                 g = {
                         mapleader = " ", -- sets vim.g.mapleader
@@ -249,6 +250,9 @@ local config = {
                         -- },
                         {
                                 "lyokha/vim-xkbswitch"
+                        },
+                        {
+                                "flazz/vim-colorschemes"
                         }
                 },
                 -- All other entries override the require("<key>").setup({...}) call for default plugins
