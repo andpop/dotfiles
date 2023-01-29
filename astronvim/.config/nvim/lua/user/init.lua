@@ -61,7 +61,7 @@ local config = {
                         heirline_bufferline = false, -- enable new heirline based bufferline (requires :PackerSync after changing)
                         XkbSwitchEnabled = 1,
                         XkbSwitchLib = '/usr/local/lib/libxkbswitch.so',
-                        -- XkbSwitchIMappings = ['ru']
+                        XkbSwitchIMappings = { 'ru' }
                 },
         },
         -- If you need more control, you can use the function()...end notation
