@@ -212,6 +212,7 @@ local config = {
                         ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
                         ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
                         ["<F2>"] = { ":w<cr>", desc = "Save File" },
+                        ["<leader>ev"] = { ":vsp $MYVIMRC<cr>", desc = "Ediv vimrc" },
                         -- quick save
                         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
                 },
@@ -372,6 +373,8 @@ local config = {
                 --     ["~/%.config/foo/.*"] = "fooscript",
                 --   },
                 -- }
+                vim.api.nvim_create_autocmd("FileType", {pattern="markdown", command=[[colorscheme basic-light]]})
+                vim.api.nvim_create_autocmd("FileType", {pattern="markdown", command=[[colorscheme PaperColor]]})
         end,
 }
 
