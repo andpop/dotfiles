@@ -60,9 +60,9 @@ map <C-h> <C-w><Left>
 
 " Файловый менеджер
 " Показать/скрыть панель NERDTree
-nmap <silent> <leader><leader>t :NERDTreeToggle<CR>
+nmap <silent> <leader>e :NERDTreeToggle<CR>
 " Открыть панель NERDTree и встать на файле, открытом в текущем буфере
-nmap <silent> <leader><leader>f :NERDTreeFind<CR>
+nmap <silent> <leader>o :NERDTreeFind<CR>
 
 " Edit .vimrc
 map <leader>vl :vsp $MYVIMRC<CR>
@@ -83,6 +83,11 @@ nnoremap <F2> :w<CR>
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+
+" copy (write) highlighted text to .vimbuffer
+vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" paste from buffer
+map <C-v> :r ~/.vimbuffer<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Include plugins
@@ -155,7 +160,7 @@ let g:camelcasemotion_key = '<leader>'
 let g:indentLine_char = '│'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  => lyokha/vim-xkbswitch
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:XkbSwitchEnabled = 1
@@ -181,12 +186,13 @@ nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
 let mapleader=" "
 
 " Включаем перенос строк, для текста он нужен
-autocmd FileType markdown :set wrap linebreak nolist
-autocmd FileType markdown :colorscheme basic-light
-" autocmd FileType markdown :colorscheme PaperColor
-autocmd FileType markdown :colorscheme gruvbox
-autocmd FileType markdown setlocal textwidth=80
-autocmd FileType markdown setlocal colorcolumn=80
+" autocmd FileType markdown :set wrap linebreak nolist
+autocmd FileType markdown :set nolist
+" autocmd FileType markdown :colorscheme basic-light
+autocmd FileType markdown :colorscheme PaperColor
+" autocmd FileType markdown :colorscheme gruvbox
+" autocmd FileType markdown setlocal textwidth=80
+" autocmd FileType markdown setlocal colorcolumn=80
 
 
 " Парные скобки для блоков кода
