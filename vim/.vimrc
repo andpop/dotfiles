@@ -78,6 +78,9 @@ inoremap <F2> <ESC>:w<CR>
 cnoremap <F2> <ESC>:w<CR>
 nnoremap <F2> :w<CR>
 
+" Автодополнение пути при нажатии Tab в режиме вставки
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-x>\<C-f>"
+
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -85,7 +88,9 @@ call plug#begin('~/.vim/plugged')
 
 
 " copy (write) highlighted text to .vimbuffer
-vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" Для WSL используется clip.exe
+" vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| xclip -selection clipboard <CR><CR>
 " paste from buffer
 map <C-v> :r ~/.vimbuffer<CR>
 
